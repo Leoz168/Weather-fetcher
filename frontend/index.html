@@ -2,25 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Weather App</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Weather App</h1>
-        <input type="text" id="cityInput" placeholder="Enter city">
-        <button onclick="getWeather()">Get Weather</button>
-        
-        <div id="weatherResult" class="hidden">
-            <p id="temperature"></p>
-            <p id="feelsLike"></p>
-            <p id="humidity"></p>
-            <p id="windSpeed"></p>
-            <p id="description"></p>
-            <p id="sunrise"></p>
-            <p id="sunset"></p>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Weather Fetcher</h1>
+                <div class="form-group">
+                    <input type="text" id="cityInput" class="form-control" placeholder="Enter city">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" onclick="getWeather()">Get Weather</button>
+                </div>
+                <div id="weatherResult" class="mt-4 d-none">
+                    <p id="temperature"></p>
+                    <p id="feelsLike"></p>
+                    <p id="humidity"></p>
+                    <p id="windSpeed"></p>
+                    <p id="description"></p>
+                    <p id="sunrise"></p>
+                    <p id="sunset"></p>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
