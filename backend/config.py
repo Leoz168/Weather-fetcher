@@ -1,1 +1,1 @@
-API_KEY = '098cff357803f97b15c0ea2ddd905667'
+API_KEY = 'your_own_api_key_for_openweather.org'
