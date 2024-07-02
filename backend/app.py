@@ -1,38 +1,3 @@
-# import datetime as dt
-# import requests
-
-# def f2c(fahrenheit):
-#     celsius = (fahrenheit - 32) * 5 / 9
-#     return celsius
-
-# api_key = 'api'
-
-# city = input("Enter city: ")
-
-# weather_data = requests.get(
-#     f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&APPID={api_key}"
-# )
-# response = weather_data.json()
-
-# temp_f = response['main']['temp']
-# temp_c = f2c(temp_f)
-# feels_f = response['main']['feels_like']
-# feels_c = f2c(feels_f)
-
-# wind_spd = response['wind']['speed']
-# humidity = response['main']['humidity']
-# description = response['weather'][0]['description']
-# sunrise = dt.datetime.utcfromtimestamp(response['sys']['sunrise'] + response['timezone'])
-# sunset = dt.datetime.utcfromtimestamp(response['sys']['sunset'] + response['timezone'])
-
-# print(f"Temperature in {city}: {temp_c:.2f}˚C or {temp_f:.2f}˚F")
-# print(f"Temprtature in {city} feels like: {feels_c:.2f}˚C or {feels_f:.2f}˚F")
-# print(f"Humidity in {city}: {humidity}%")
-# print(f"Wind Speed in {city}: {wind_spd}m/s")
-# print(f"General Weather in {city}: {description}")
-# print(f"Sun rises in {city} at {sunrise} local time.")
-# print(f"Sun sets in {city} at {sunset} local time.")
-
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import datetime as dt
@@ -46,6 +11,7 @@ def f2c(fahrenheit):
     celsius = (fahrenheit - 32) * 5 / 9
     return celsius
 
+# using api to fetch data from openweatherapi website
 @app.route('/weather')
 def get_weather():
     city = request.args.get('city')
