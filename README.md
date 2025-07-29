@@ -57,6 +57,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 OpenWeatherMap for the weather data API.
 Flask, for providing a simple and powerful web framework.
 
-## Contact Information
-Address: S2602 Icon, 330 Phillip St. Waterloo N2L3W9 ON CA.
-
